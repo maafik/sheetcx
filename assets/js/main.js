@@ -225,7 +225,8 @@ function updateTshirtOptions() {
   document.getElementById('tshirtDescription').style.display = design === 'custom' ? 'block' : 'none';
 }
 
-document.getElementById('orderForm').addEventListener('submit', async function (e) {
+const orderForm = document.getElementById('orderForm');
+if (orderForm) orderForm.addEventListener('submit', async function (e) {
   e.preventDefault();
   const form = e.target;
   const formData = new FormData(form);
