@@ -1621,4 +1621,18 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+  --starter-section: 0;
+}
+
+.glightbox-container,
+.glightbox-container * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.glightbox-container img {
+  pointer-events: none;
 }

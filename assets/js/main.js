@@ -114,6 +114,68 @@
     selector: '.glightbox'
   });
 
+  const portfolioLink = document.getElementById('portfolioLink');
+  if (portfolioLink) {
+    portfolioLink.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const preventIfLightboxOpen = (event) => {
+        const container = document.querySelector('.glightbox-container');
+        if (!container) {
+          document.removeEventListener('keydown', preventIfLightboxOpen, true);
+          return;
+        }
+        if (event.ctrlKey || event.metaKey) {
+          const key = (event.key || '').toLowerCase();
+          if (key === 's' || key === 'c' || key === 'u' || key === 'p') {
+            event.preventDefault();
+          }
+        }
+      };
+
+      const lockLightboxInteractions = () => {
+        const container = document.querySelector('.glightbox-container');
+        if (!container) return;
+
+        const prevent = (ev) => {
+          ev.preventDefault();
+          ev.stopPropagation();
+        };
+
+        container.addEventListener('contextmenu', prevent, { passive: false });
+        container.addEventListener('dragstart', prevent, { passive: false });
+        container.addEventListener('selectstart', prevent, { passive: false });
+        container.addEventListener('copy', prevent, { passive: false });
+        container.addEventListener('cut', prevent, { passive: false });
+
+        document.addEventListener('keydown', preventIfLightboxOpen, true);
+      };
+
+      const galleryItems = [
+        { href: 'assets/img/gallery/gallery-1.jpg', type: 'image' },
+        { href: 'assets/img/gallery/gallery-2.jpg', type: 'image' },
+        { href: 'assets/img/gallery/gallery-3.jpg', type: 'image' },
+        { href: 'assets/img/gallery/gallery-4.jpg', type: 'image' },
+        { href: 'assets/img/gallery/gallery-5.jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-54 (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-55 (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-55 (2) (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-55 (3) (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-56 (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-56 (2) (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-56 (3) (1).jpg', type: 'image' },
+        { href: 'assets/img/gallery/photo_2025-07-03_23-08-56 (4) (1).jpg', type: 'image' }
+      ];
+
+      const popup = GLightbox({
+        elements: galleryItems
+      });
+      popup.open();
+
+      setTimeout(lockLightboxInteractions, 0);
+    });
+  }
+
   /**
    * Init swiper sliders
    */
