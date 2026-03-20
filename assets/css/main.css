@@ -1639,9 +1639,9 @@ section,
 
 .max-icon {
   display: inline-block;
-  background: url('/icons/Max_logo.svg') center/contain no-repeat;
-  width: 32px;
-  height: 32px;
+  background: url('/icons/Max_logo.svg');
+  width: 18px;
+  height: 15px;
 }
 
 @media (prefers-color-scheme: dark) {
