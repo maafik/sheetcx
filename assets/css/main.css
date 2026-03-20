@@ -1636,16 +1636,3 @@ section,
 .glightbox-container img {
   pointer-events: none;
 }
-
-.max-icon {
-  display: inline-block;
-  background: url('/icons/Max_logo.svg');
-  width: 18px;
-  height: 15px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .max-icon {
-    background-image: url('/icons/Max_logo_black.svg');
-  }
-}
