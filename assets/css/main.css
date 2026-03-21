@@ -409,6 +409,13 @@ textarea:focus {
   line-height: 0px;
 }
 
+.header .header-social-links a img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .price-section.centered {
   text-align: center;
 }
@@ -730,6 +737,12 @@ textarea:focus {
 .footer .social-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+.footer .social-links a img {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .footer .credits {
