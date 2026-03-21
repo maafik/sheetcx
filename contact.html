@@ -158,7 +158,14 @@
     <a href="https://max.ru/u/f9LHodD0cOKFTOiDTiyeETaoW0tU1m-Z9Y6-FG8W3-4ZgeaolF8IkPWE2fU"
        target="_blank"
        style="text-decoration: none; color: inherit;"
-       class="d-flex align-items-center">
+       class="d-flex align-items-center"
+
+       onmouseover="this.querySelector('img').src='icons/Max_logo_black.svg'"
+       onmouseout="this.querySelector('img').src='icons/Max_logo.svg'"
+
+       ontouchstart="this.querySelector('img').src='icons/Max_logo_black.svg'"
+       ontouchend="this.querySelector('img').src='icons/Max_logo.svg'"
+    >
 
       <i class="flex-shrink-0">
         <img src="icons/Max_logo.svg"
@@ -166,14 +173,7 @@
              width="24"
              height="24"
              style="display:block;"
-             loading="lazy"
-
-             onmouseover="this.src='icons/Max_logo_black.svg'"
-             onmouseout="this.src='icons/Max_logo.svg'"
-
-             ontouchstart="this.src='icons/Max_logo_black.svg'"
-             ontouchend="this.src='icons/Max_logo.svg'"
-        >
+             loading="lazy">
       </i>
 
       <div>
