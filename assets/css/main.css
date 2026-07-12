@@ -2872,6 +2872,10 @@ section,
   aspect-ratio: 1080 / 2340;
 }
 
+.ba-card__side--full {
+  aspect-ratio: 1080 / 2036;
+}
+
 .ba-card__side + .ba-card__side {
   margin-top: 12px;
 }
