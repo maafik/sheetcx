@@ -2179,15 +2179,15 @@ section,
 
 .mfb-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   margin: 0 auto;
   max-width: 1100px;
 }
 
 @media (min-width: 576px) {
   .mfb-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
   }
 }
 
@@ -2833,15 +2833,15 @@ section,
 --------------------------------------------------------------*/
 .ba-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   max-width: 1160px;
   margin: 0 auto;
 }
 
 @media (min-width: 576px) {
   .ba-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
