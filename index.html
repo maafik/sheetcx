@@ -21,8 +21,8 @@
   <!-- Яндекс Директ и Open Graph -->
   <meta property="og:title" content="эскиз-тату — Эскизы на заказ">
   <meta property="og:description" content="Профессиональные тату-эскизы на заказ. Уникальные дизайны, разработанные специально для вас.">
-  <meta property="og:image" content="http://irina-tattoosketch.ru/assets/img/logo.png">
-  <meta property="og:url" content="http://irina-tattoosketch.ru/">
+  <meta property="og:image" content="http://www.tattoosketchirina.online/assets/img/logo.png">
+  <meta property="og:url" content="http://www.tattoosketchirina.online/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="эскиз-тату">
   <meta property="og:locale" content="ru_RU">
@@ -31,7 +31,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="эскиз-тату — Эскизы на заказ">
   <meta name="twitter:description" content="Профессиональные тату-эскизы на заказ">
-  <meta name="twitter:image" content="http://irina-tattoosketch.ru/assets/img/logo.png">
+  <meta name="twitter:image" content="http://www.tattoosketchirina.online/assets/img/logo.png">
   
   <!-- Дополнительные размеры иконок для лучшей совместимости -->
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
@@ -47,7 +47,7 @@
 
   <!-- Critical CSS preload -->
   <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-  <link rel="preload" href="assets/css/main.css?v=2.2" as="style">
+  <link rel="preload" href="assets/css/main.css?v=2.3" as="style">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,10 +57,18 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css?v=2.2" rel="stylesheet">
+  <link href="assets/css/main.css?v=2.3" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+  <style>
+    /* Логотип в шапке */
+    .header-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; line-height: 0; z-index: 1; }
+    .header-logo img { height: 56px; width: auto; display: block; }
+    @media (max-width: 575px) { .header-logo img { height: 44px; } }
+  </style>
 </head>
+
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -69,13 +77,12 @@
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109384861', 'ym');
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113437921', 'ym');
 
-    ym(109384861, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    ym(113437921, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109384861" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/113437921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
 
 <body class="index-page">
 
@@ -83,18 +90,14 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="http://irina-tattoosketch.ru/" class="active">Главная<br></a></li>
-          <li><a href="http://irina-tattoosketch.ru/about.html">Обо мне</a></li>
-          <li><a href="http://irina-tattoosketch.ru/contact.html">Контакты</a></li>
+          <li><a href="http://www.tattoosketchirina.online/" class="active">Главная<br></a></li>
+          <li><a href="http://www.tattoosketchirina.online/about.html">Обо мне</a></li>
+          <li><a href="http://www.tattoosketchirina.online/contact.html">Контакты</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="whatsapp" onclick="openTelegramModal(); return false;"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="whatsapp" onclick="openWhatsAppModal(); return false;"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://vk.me/tattoo_sketchs1" class="instagram"><i class='fab fa-vk'></i></a>
-      </div>
+      <a href="http://www.tattoosketchirina.online/" class="header-logo" aria-label="Эскиз тату — на главную"><img src="assets/img/logo-header.png" alt="Эскиз тату" width="78" height="56"></a>
 
     </div>
   </header>
@@ -359,7 +362,7 @@
             <img class="mfb-card__img" src="assets/img/gallery/gallery-1.jpg" alt="Геометрический нео-брутализм" loading="lazy" draggable="false" oncontextmenu="return false;">
             <figcaption class="mfb-card__caption">
               <h3 class="mfb-card__title">Геометрический нео-брутализм</h3>
-              <p class="mfb-card__desc">Голова волка, выполненная с использованием чётких геометрических форм и резких линий, подчёркивающих дикость образа</p>
+              <p class="mfb-card__desc"></p>
             </figcaption>
           </figure>
 
@@ -367,7 +370,7 @@
             <img class="mfb-card__img" src="assets/img/gallery/gallery-2.jpg" alt="Кибер-готика" loading="lazy" draggable="false" oncontextmenu="return false;">
             <figcaption class="mfb-card__caption">
               <h3 class="mfb-card__title">Кибер-готика</h3>
-              <p class="mfb-card__desc">Футуристичный ворон с технологичными элементами и контрастным светом, создающий мрачный и загадочный образ</p>
+              <p class="mfb-card__desc"></p>
             </figcaption>
           </figure>
 
@@ -375,7 +378,7 @@
             <img class="mfb-card__img" src="assets/img/gallery/gallery-3.jpg" alt="Абстрактный дарк-сюрреализм" loading="lazy" draggable="false" oncontextmenu="return false;">
             <figcaption class="mfb-card__caption">
               <h3 class="mfb-card__title">Абстрактный дарк-сюрреализм</h3>
-              <p class="mfb-card__desc">Абстрактный череп с контрастными мазками и мрачной атмосферой, символизирующий жизнь и разрушение</p>
+              <p class="mfb-card__desc"></p>
             </figcaption>
           </figure>
 
@@ -383,7 +386,7 @@
             <img class="mfb-card__img" src="assets/img/gallery/gallery-4.jpg" alt="Экспрессивный анимализм" loading="lazy" draggable="false" oncontextmenu="return false;">
             <figcaption class="mfb-card__caption">
               <h3 class="mfb-card__title">Экспрессивный анимализм</h3>
-              <p class="mfb-card__desc">Динамичный образ медведя с резкими линиями и тёмными акцентами, передающий ярость и мощь</p>
+              <p class="mfb-card__desc"></p>
             </figcaption>
           </figure>
 
@@ -391,7 +394,7 @@
             <img class="mfb-card__img" src="assets/img/gallery/gallery-5.jpg" alt="Хищный реализм" loading="lazy" draggable="false" oncontextmenu="return false;">
             <figcaption class="mfb-card__caption">
               <h3 class="mfb-card__title">Хищный реализм</h3>
-              <p class="mfb-card__desc">Реалистичный образ волка с акцентом на взгляд и оскал, передающий силу, агрессию и первобытный инстинкт</p>
+              <p class="mfb-card__desc"></p>
             </figcaption>
           </figure>
         </div>
@@ -470,18 +473,67 @@
       </div>
     </section><!-- /Before After Section -->
 
+    <!-- Reviews Section -->
+    <!-- Замените имена, тексты отзывов и оценки на реальные — это placeholder-контент -->
+    <section id="reviews" class="section reviews-section">
+      <div class="container" data-aos="fade-up" data-aos-delay="80">
+        <div class="section-title text-center">
+          <h2>Отзывы</h2>
+          <p>Что говорят те, кто уже заказал эскиз</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">Заказывал эскиз рукава, Ирина сразу поняла идею и предложила даже лучше, чем я представлял. Мастер набил один в один.</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">И</div>
+              <div>
+                <div class="review-card__name">Игорь</div>
+                <div class="review-card__meta">Эскиз рукава</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">Быстро, по делу, без лишних правок. Описал идею в двух словах и получил готовый эскиз уже через два дня.</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">Д</div>
+              <div>
+                <div class="review-card__name">Дмитрий</div>
+                <div class="review-card__meta">Минимализм</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">Очень внимательно отнеслась к деталям, я скидывала референсы, и всё учла. Результат превзошёл ожидания.</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">М</div>
+              <div>
+                <div class="review-card__name">Мария</div>
+                <div class="review-card__meta">Реализм</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Reviews Section -->
+
   </main>
 
   <footer id="footer" class="footer">
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Cиденьникова И.С</span> <strong class="px-1 sitename">эскиз-тату</strong> <span>Все права защищены</span></p>
+        <p>© <span>Cидельникова И.С</span> <strong class="px-1 sitename">эскиз-тату</strong> <span>Все права защищены</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="#" class="whatsapp" onclick="openTelegramModal(); return false;"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="whatsapp" onclick="openWhatsAppModal(); return false;"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://vk.me/tattoo_sketchs1"><i class='fab flex-shrink-0'>&#xf189;</i></a>
+        <a href="#" class="social-links__icon social-links__icon--tg" onclick="openTelegramModal(); return false;" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+        <a href="#" class="social-links__icon social-links__icon--wa" onclick="openWhatsAppModal(); return false;" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://vk.me/tattoo_sketchs1" class="social-links__icon social-links__icon--vk" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -490,37 +542,103 @@
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
       <a href="#order" class="order-trigger">Заказать эскиз</a>
       </div>
+      <div class="text-center">
+        <button type="button" class="footer-privacy-link" onclick="openPrivacyModal()">Политика конфиденциальности</button>
+      </div>
     </div>
 
   </footer>
 
   <!-- Order Modal -->
-  <div class="order-modal" id="orderModal">
-    <div class="order-modal__dialog">
-      <button class="order-modal__close" type="button" aria-label="Закрыть">✕</button>
-      <div class="order-modal__title">Создадим твой уникальный тату-эскиз вместе</div>
-      <div class="order-modal__text">
-        Напиши мне прямо сейчас, и я разработаю авторский эскиз под твой стиль и место на теле.
-        2 правки бесплатно, готово за 48 часов. Твоя идея — мой дизайн!
-      </div>
-      <div class="order-modal__actions">
-        <a class="order-modal__btn order-modal__btn--tg" href="#" onclick="openTelegramModal(); return false;">
-          <span class="order-modal__btn-content">
+<div class="order-modal" id="orderModal">
+  <div class="order-modal__dialog">
+    <button class="order-modal__close" type="button" aria-label="Закрыть"><i class="bi bi-x-lg"></i></button>
+
+    <div class="order-modal__title">
+      Создадим твой уникальный тату-эскиз вместе
+    </div>
+
+    <div class="order-modal__text">
+      Напиши мне прямо сейчас, и я разработаю авторский эскиз под твой стиль и место на теле.
+      2 правки бесплатно, готово за 48 часов. Твоя идея — мой дизайн!
+    </div>
+
+    <div class="order-modal__actions">
+      <a class="order-modal__btn order-modal__btn--tg" href="https://t.me/Irinasketchs?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%8D%D1%81%D0%BA%D0%B8%D0%B7." target="_blank" rel="noopener">
+        <span class="order-modal__btn-content">
+          <i class="bi bi-telegram order-modal__btn-icon"></i>
+          <span class="order-modal__btn-text">
             <span class="order-modal__btn-main">Telegram</span>
             <span class="order-modal__btn-sub">работает с VPN</span>
           </span>
-        </a>
-        <a class="order-modal__btn order-modal__btn--vk" href="https://vk.me/tattoo_sketchs1" target="_blank" rel="noopener">ВКонтакте</a>
-                    <a class="order-modal__btn order-modal__btn--tg" href="#" onclick="openWhatsAppModal(); return false;">
-          <span class="order-modal__btn-content">
+        </span>
+      </a>
+      <a class="order-modal__btn order-modal__btn--wa" href="https://wa.me/79517623467?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%8D%D1%81%D0%BA%D0%B8%D0%B7." target="_blank" rel="noopener">
+        <span class="order-modal__btn-content">
+          <i class="bi bi-whatsapp order-modal__btn-icon"></i>
+          <span class="order-modal__btn-text">
             <span class="order-modal__btn-main">WhatsApp</span>
             <span class="order-modal__btn-sub">работает с VPN</span>
           </span>
-        </a>
+        </span>
+      </a>
+      <a class="order-modal__btn order-modal__btn--vk" href="https://vk.me/tattoo_sketchs1" target="_blank" rel="noopener">
+        <span class="order-modal__btn-content">
+          <i class="fab fa-vk order-modal__btn-icon"></i>
+          <span class="order-modal__btn-text">
+            <span class="order-modal__btn-main">ВКонтакте</span>
+            <span class="order-modal__btn-sub">без VPN</span>
+          </span>
+        </span>
+      </a>
+      <a class="order-modal__btn order-modal__btn--max" href="https://max.ru/u/f9LHodD0cOKFTOiDTiyeETaoW0tU1m-Z9Y6-FG8W3-4ZgeaolF8IkPWE2fU" target="_blank" rel="noopener">
+        <span class="order-modal__btn-content">
+          <span class="order-modal__btn-icon order-modal__btn-icon--max" aria-hidden="true"></span>
+          <span class="order-modal__btn-text">
+            <span class="order-modal__btn-main">MAX</span>
+            <span class="order-modal__btn-sub">без VPN</span>
+          </span>
+        </span>
+      </a>
+    </div>
+
+    <button type="button" class="order-examples-trigger" id="openExamplesBtn">
+      <i class="bi bi-images"></i> Посмотреть примеры работ
+    </button>
+
+  </div>
+</div>
+
+  <!-- Попап с важной информацией: показывается перед выбором мессенджера -->
+  <div class="order-modal" id="orderInfoModal">
+    <div class="order-modal__dialog order-modal__dialog--sm">
+      <button class="order-modal__close" type="button" aria-label="Закрыть" id="orderInfoCloseBtn"><i class="bi bi-x-lg"></i></button>
+
+      <div class="order-modal__title">Прежде чем начнём</div>
+
+      <div class="order-modal__text" style="margin-bottom: 18px;">
+        Коротко о том, как я работаю, чтобы не было недопонимания.
       </div>
 
+      <div class="order-thanks__laststep" style="width: 100%; box-sizing: border-box; align-items: flex-start;">
+        <span class="order-thanks__badge">Важно</span>
+        <p class="order-scope-note">Я рисую эскизы — <strong>сам дизайн</strong>, а не набиваю тату. Для нанесения понадобится мастер-тату у тебя в городе.</p>
+        <p class="order-scope-note">Если вы хотите набить тату — пожалуйста, не пишите: я эскизы не набиваю.</p>
+      </div>
+
+      <button type="button" class="order-form__submit" id="orderInfoContinueBtn" style="width: 100%; margin-top: 20px;">Понятно, к мессенджерам</button>
+    </div>
+  </div>
+
+  <!-- Попап с примерами работ: вынесен из формы заказа отдельно -->
+  <div class="order-modal" id="examplesModal">
+    <div class="order-modal__dialog">
+      <button class="order-modal__close" type="button" aria-label="Закрыть" id="examplesCloseBtn"><i class="bi bi-x-lg"></i></button>
+
+      <div class="order-modal__title">Примеры работ</div>
+      <div class="order-modal__text">Несколько эскизов, которые я делала для клиентов.</div>
+
       <div class="order-carousel">
-        <span class="order-carousel__label">Откроется в новом окне</span>
         <div class="order-carousel__viewport">
           <div class="order-carousel__track" id="orderCarouselTrack">
             <div class="order-carousel__item">
@@ -553,7 +671,6 @@
             <button class="order-carousel__arrow order-carousel__arrow--next" type="button" data-dir="1">›</button>
           </div>
         </div>
-        <small>Примеры работ</small>
       </div>
     </div>
   </div>
@@ -561,7 +678,7 @@
   <!-- Telegram Modal -->
   <div class="order-modal" id="telegramModal" style="display: none;">
     <div class="order-modal__dialog">
-      <button class="order-modal__close" type="button" aria-label="Закрыть" onclick="closeTelegramModal()">✕</button>
+      <button class="order-modal__close" type="button" aria-label="Закрыть" onclick="closeTelegramModal()"><i class="bi bi-x-lg"></i></button>
       <div class="order-modal__title">Написать в Telegram</div>
       <div class="order-modal__text">
         Для работы Telegram в России нужно включить VPN. Если у вас нет VPN, лучше воспользуйтесь ВКонтакте.
@@ -569,10 +686,21 @@
       <div class="order-modal__actions">
         <a class="order-modal__btn order-modal__btn--tg" href="https://t.me/Irinasketchs?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%8D%D1%81%D0%BA%D0%B8%D0%B7." target="_blank" rel="noopener">
           <span class="order-modal__btn-content">
+            <i class="bi bi-telegram order-modal__btn-icon"></i>
+            <span class="order-modal__btn-text">
             <span class="order-modal__btn-main">Telegram</span>
             <span class="order-modal__btn-sub">работает с VPN</span>
+            </span>
           </span>
-                  <a class="order-modal__btn order-modal__btn--vk" href="https://vk.me/tattoo_sketchs1" target="_blank" rel="noopener">ВКонтакте</a>
+        </a>
+        <a class="order-modal__btn order-modal__btn--vk" href="https://vk.me/tattoo_sketchs1" target="_blank" rel="noopener">
+          <span class="order-modal__btn-content">
+            <i class="fab fa-vk order-modal__btn-icon"></i>
+            <span class="order-modal__btn-text">
+            <span class="order-modal__btn-main">ВКонтакте</span>
+            <span class="order-modal__btn-sub">Без VPN</span>
+            </span>
+          </span>
         </a>
       </div>
     </div>
@@ -581,7 +709,7 @@
   <!-- WhatsApp Modal -->
   <div class="order-modal" id="whatsappModal" style="display: none;">
     <div class="order-modal__dialog">
-      <button class="order-modal__close" type="button" aria-label="Закрыть" onclick="closeWhatsAppModal()">✕</button>
+      <button class="order-modal__close" type="button" aria-label="Закрыть" onclick="closeWhatsAppModal()"><i class="bi bi-x-lg"></i></button>
       <div class="order-modal__title">Написать в WhatsApp</div>
       <div class="order-modal__text">
         Для работы WhatsApp в России нужно включить VPN. Если у вас нет VPN, лучше воспользуйтесь ВКонтакте.
@@ -589,11 +717,19 @@
       <div class="order-modal__actions">
         <a class="order-modal__btn order-modal__btn--wa" href="https://wa.me/79517623467?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%8D%D1%81%D0%BA%D0%B8%D0%B7." target="_blank" rel="noopener">
           <span class="order-modal__btn-content">
+            <i class="bi bi-whatsapp order-modal__btn-icon"></i>
+            <span class="order-modal__btn-text">
             <span class="order-modal__btn-main">WhatsApp</span>
             <span class="order-modal__btn-sub">работает с VPN</span>
+            </span>
           </span>
         </a>
-        <a class="order-modal__btn order-modal__btn--vk" href="https://vk.me/tattoo_sketchs1" target="_blank" rel="noopener">ВКонтакте</a>
+        <a class="order-modal__btn order-modal__btn--vk" href="https://vk.me/tattoo_sketchs1" target="_blank" rel="noopener">
+          <span class="order-modal__btn-content">
+            <i class="fab fa-vk order-modal__btn-icon"></i>
+            <span class="order-modal__btn-text"><span class="order-modal__btn-main">ВКонтакте</span></span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
@@ -621,20 +757,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js?v=2.2" defer></script>
 
-  <!-- Tracking scripts - loaded after page load for better performance -->
+  <!-- Модалки Telegram/WhatsApp с уведомлением про VPN (открываются из иконок в шапке/футере и кнопок в попапе заказа) -->
   <script>
-    // WhatsApp Modal functions
-    function openWhatsAppModal() {
-      document.getElementById('whatsappModal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeWhatsAppModal() {
-      document.getElementById('whatsappModal').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-
-    // Telegram Modal functions
     function openTelegramModal() {
       document.getElementById('telegramModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
@@ -644,19 +768,135 @@
       document.getElementById('telegramModal').style.display = 'none';
       document.body.style.overflow = '';
     }
-    
-    // Close modal when clicking outside
-    document.addEventListener('click', function(event) {
-      const whatsappModal = document.getElementById('whatsappModal');
-      const telegramModal = document.getElementById('telegramModal');
-      if (event.target === whatsappModal) {
-        closeWhatsAppModal();
-      }
-      if (event.target === telegramModal) {
-        closeTelegramModal();
-      }
-    });
 
+    function openWhatsAppModal() {
+      document.getElementById('whatsappModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeWhatsAppModal() {
+      document.getElementById('whatsappModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (event) {
+      var telegramModal = document.getElementById('telegramModal');
+      var whatsappModal = document.getElementById('whatsappModal');
+      if (event.target === telegramModal) closeTelegramModal();
+      if (event.target === whatsappModal) closeWhatsAppModal();
+    });
+  </script>
+
+  <!-- Логика попапов заказа: инфо-попап -> попап с мессенджерами, попап примеров работ, карусель -->
+  <script>
+    (function () {
+      var orderModal = document.getElementById('orderModal');
+      var orderInfoModal = document.getElementById('orderInfoModal');
+      var examplesModal = document.getElementById('examplesModal');
+      if (!orderModal || !orderInfoModal) return;
+
+      var closeBtn = orderModal.querySelector('.order-modal__close');
+      var triggers = document.querySelectorAll('.order-trigger');
+
+      function openModal(modal) {
+        modal.classList.add('open');
+        document.body.classList.add('modal-open');
+      }
+
+      function closeModal(modal) {
+        modal.classList.remove('open');
+        // Снимаем блокировку скролла, только если больше не открыт ни один попап
+        var anyOpen = document.querySelector('.order-modal.open');
+        if (!anyOpen) document.body.classList.remove('modal-open');
+      }
+
+      // Первый шаг: попап с важной информацией
+      function openOrderInfoModal(e) {
+        if (e) e.preventDefault();
+        openModal(orderInfoModal);
+      }
+
+      function closeOrderInfoModal() {
+        closeModal(orderInfoModal);
+      }
+
+      // Второй шаг: попап с кнопками мессенджеров
+      function openOrderModal() {
+        openModal(orderModal);
+      }
+
+      function closeOrderModal() {
+        closeModal(orderModal);
+      }
+
+      function openExamplesModal(e) {
+        if (e) e.preventDefault();
+        if (examplesModal) openModal(examplesModal);
+      }
+
+      function closeExamplesModal() {
+        if (examplesModal) closeModal(examplesModal);
+      }
+
+      // Клик по любой кнопке "Заказать эскиз" открывает сначала инфо-попап
+      triggers.forEach(function (t) {
+        t.addEventListener('click', openOrderInfoModal);
+      });
+
+      var orderInfoCloseBtn = document.getElementById('orderInfoCloseBtn');
+      var orderInfoContinueBtn = document.getElementById('orderInfoContinueBtn');
+      if (orderInfoCloseBtn) orderInfoCloseBtn.addEventListener('click', closeOrderInfoModal);
+      if (orderInfoContinueBtn) {
+        orderInfoContinueBtn.addEventListener('click', function () {
+          closeOrderInfoModal();
+          openOrderModal();
+        });
+      }
+      orderInfoModal.addEventListener('click', function (e) {
+        if (e.target === orderInfoModal) closeOrderInfoModal();
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeOrderModal);
+      orderModal.addEventListener('click', function (e) {
+        if (e.target === orderModal) closeOrderModal();
+      });
+
+      // Попап "Примеры работ" — открывается кнопкой из попапа с мессенджерами
+      var openExamplesBtn = document.getElementById('openExamplesBtn');
+      var examplesCloseBtn = document.getElementById('examplesCloseBtn');
+      if (openExamplesBtn) openExamplesBtn.addEventListener('click', openExamplesModal);
+      if (examplesCloseBtn) examplesCloseBtn.addEventListener('click', closeExamplesModal);
+      if (examplesModal) {
+        examplesModal.addEventListener('click', function (e) {
+          if (e.target === examplesModal) closeExamplesModal();
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        if (examplesModal && examplesModal.classList.contains('open')) closeExamplesModal();
+        else if (orderModal.classList.contains('open')) closeOrderModal();
+        else if (orderInfoModal.classList.contains('open')) closeOrderInfoModal();
+      });
+
+      // Стрелки карусели (карусель живёт в попапе examplesModal)
+      var track = document.getElementById('orderCarouselTrack');
+      var arrows = document.querySelectorAll('.order-carousel__arrow');
+      arrows.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (!track) return;
+          var firstItem = track.querySelector('.order-carousel__item');
+          var itemWidth = firstItem ? firstItem.getBoundingClientRect().width + 14 : 260;
+          var dir = parseInt(btn.getAttribute('data-dir'), 10) || 1;
+          track.scrollBy({ left: dir * itemWidth, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
+
+
+  <!-- Tracking scripts - loaded after page load for better performance -->
+  <script>
     window.addEventListener('load', function() {
       setTimeout(function() {
         // Загружаем изображение с задержкой 1 секунду
@@ -696,6 +936,70 @@
   <!-- <noscript>
     <div><img src="https://top-fwz1.mail.ru/counter?id=3636165;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div>
   </noscript> -->
+
+  <!-- Privacy Policy Modal -->
+  <div class="order-modal" id="privacyModal">
+    <div class="order-modal__dialog">
+      <button class="order-modal__close" type="button" aria-label="Закрыть" onclick="closePrivacyModal()"><i class="bi bi-x-lg"></i></button>
+
+      <div class="order-modal__title" style="font-size: 24px;">Политика конфиденциальности</div>
+
+      <div class="privacy-modal__body">
+        <h4>1. Общие положения</h4>
+        <p>Сайт www.tattoosketchirina.online (далее — «Сайт») принадлежит Cидельниковой И.С. и предоставляет услуги по разработке авторских тату-эскизов на заказ. Используя Сайт и обращаясь через мессенджеры (Telegram, WhatsApp, ВКонтакте, MAX), вы соглашаетесь с условиями настоящей политики.</p>
+
+        <h4>2. Какие данные собираются</h4>
+        <ul>
+          <li>Имя и контактные данные, которые вы сообщаете при обращении через мессенджеры;</li>
+          <li>Переписка и пожелания по эскизу, необходимые для выполнения заказа;</li>
+          <li>Обезличенные технические данные о посещении Сайта (через Яндекс.Метрику): страницы, время визита, устройство, переходы.</li>
+        </ul>
+
+        <h4>3. Цели обработки данных</h4>
+        <p>Данные используются исключительно для связи с вами, обсуждения деталей заказа, разработки эскиза и улучшения работы Сайта. Данные не передаются третьим лицам и не используются в рекламных рассылках без вашего согласия.</p>
+
+        <h4>4. Оплата и возврат средств</h4>
+        <p><strong>После получения оплаты и до утверждения финального варианта я вношу правки и дорабатываю эскиз, пока вы не подтвердите, что результат вас устраивает.</strong> Однако после того как готовая работа передана заказчику, возврат денежных средств не производится — в том числе в случае, если итоговый эскиз в итоге не понравился. Пожалуйста, внимательно проговаривайте пожелания и принимайте работу только после того, как результат полностью вас устроит.</p>
+
+        <h4>5. Cookies и аналитика</h4>
+        <p>Сайт использует счётчик Яндекс.Метрика для сбора обезличенной статистики посещаемости. Вы можете отключить cookies в настройках браузера — это не повлияет на возможность связаться со мной через мессенджеры.</p>
+
+        <h4>6. Права пользователя</h4>
+        <p>Вы можете запросить удаление переданных мне данных (переписки, контактов) в любой момент, написав об этом в любом из мессенджеров, указанных на Сайте.</p>
+
+        <h4>7. Контакты</h4>
+        <p>По всем вопросам, связанным с настоящей политикой, пишите через Telegram, WhatsApp или ВКонтакте — ссылки доступны в шапке и в футере Сайта.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPrivacyModal(e) {
+      if (e) e.preventDefault();
+      var m = document.getElementById('privacyModal');
+      if (!m) return;
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePrivacyModal() {
+      var m = document.getElementById('privacyModal');
+      if (!m) return;
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (event) {
+      var privacyModal = document.getElementById('privacyModal');
+      if (privacyModal && event.target === privacyModal) closePrivacyModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var privacyModal = document.getElementById('privacyModal');
+      if (privacyModal && privacyModal.classList.contains('open')) closePrivacyModal();
+    });
+  </script>
 
 </body>
 

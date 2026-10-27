@@ -43,6 +43,12 @@
   * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
   * Author: BootstrapMade.com
   ======================================================== -->
+  <style>
+    /* Логотип в шапке */
+    .header-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; line-height: 0; z-index: 1; }
+    .header-logo img { height: 56px; width: auto; display: block; }
+    @media (max-width: 575px) { .header-logo img { height: 44px; } }
+  </style>
 </head>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -51,13 +57,12 @@
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109384861', 'ym');
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113437921', 'ym');
 
-    ym(109384861, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    ym(113437921, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109384861" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/113437921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
 
 <body class="about-page">
 
@@ -67,18 +72,14 @@
       
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="http://irina-tattoosketch.ru/">Главная<br></a></li>
-          <li><a href="http://irina-tattoosketch.ru/about.html" class="active">Обо мне</a></li>
-          <li><a href="http://irina-tattoosketch.ru/contact.html">Контакты</a></li>
+          <li><a href="http://www.tattoosketchirina.online/">Главная<br></a></li>
+          <li><a href="http://www.tattoosketchirina.online/about.html" class="active">Обо мне</a></li>
+          <li><a href="http://www.tattoosketchirina.online/contact.html">Контакты</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="whatsapp" onclick="openTelegramModal(); return false;"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="whatsapp" onclick="openWhatsAppModal(); return false;"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://vk.me/tattoo_sketchs1" class="instagram"><i class='fab fa-vk'></i></a>
-      </div>
+      <a href="http://www.tattoosketchirina.online/" class="header-logo" aria-label="Эскиз тату — на главную"><img src="assets/img/logo-header.png" alt="Эскиз тату" width="78" height="56"></a>
 
     </div>
   </header>
@@ -95,7 +96,7 @@
   Я создаю уникальные эскизы на заказ, которые отражают вашу индивидуальность и идею. 
   Каждый эскиз разрабатывается с особой тщательностью и вниманием к деталям, чтобы результат превзошёл ваши ожидания.</p>
 
-              <a href="http://irina-tattoosketch.ru/contact.html" class="cta-btn">Заказать эскиз<br></a>
+              <a href="http://www.tattoosketchirina.online/contact.html" class="cta-btn">Заказать эскиз<br></a>
             </div>
           </div>
         </div>
@@ -103,7 +104,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="http://irina-tattoosketch.ru/">Главная</a></li>
+            <li><a href="http://www.tattoosketchirina.online/">Главная</a></li>
             <li class="current">Обо мне</li>
           </ol>
         </div>
@@ -161,7 +162,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Cиденьникова И.С</span> <strong class="px-1 sitename">эскиз-тату</strong> <span> Все права защищены</span></p>
+        <p>© <span>Cидельникова И.С</span> <strong class="px-1 sitename">эскиз-тату</strong> <span> Все права защищены</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="#" class="whatsapp" onclick="openTelegramModal(); return false;"><i class="bi bi-facebook"></i></a>
@@ -173,7 +174,10 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-<a href="http://irina-tattoosketch.ru/contact.html">👉 Заказать эскиз</a>
+<a href="http://www.tattoosketchirina.online/contact.html">👉 Заказать эскиз</a>
+      </div>
+      <div class="text-center">
+        <button type="button" class="footer-privacy-link" onclick="openPrivacyModal()">Политика конфиденциальности</button>
       </div>
     </div>
 
@@ -357,6 +361,70 @@
       if (event.target === whatsappModal) {
         closeWhatsAppModal();
       }
+    });
+  </script>
+
+  <!-- Privacy Policy Modal -->
+  <div class="order-modal" id="privacyModal">
+    <div class="order-modal__dialog">
+      <button class="order-modal__close" type="button" aria-label="Закрыть" onclick="closePrivacyModal()"><i class="bi bi-x-lg"></i></button>
+
+      <div class="order-modal__title" style="font-size: 24px;">Политика конфиденциальности</div>
+
+      <div class="privacy-modal__body">
+        <h4>1. Общие положения</h4>
+        <p>Сайт www.tattoosketchirina.online (далее — «Сайт») принадлежит Cидельниковой И.С. и предоставляет услуги по разработке авторских тату-эскизов на заказ. Используя Сайт и обращаясь через мессенджеры (Telegram, WhatsApp, ВКонтакте, MAX), вы соглашаетесь с условиями настоящей политики.</p>
+
+        <h4>2. Какие данные собираются</h4>
+        <ul>
+          <li>Имя и контактные данные, которые вы сообщаете при обращении через мессенджеры;</li>
+          <li>Переписка и пожелания по эскизу, необходимые для выполнения заказа;</li>
+          <li>Обезличенные технические данные о посещении Сайта (через Яндекс.Метрику): страницы, время визита, устройство, переходы.</li>
+        </ul>
+
+        <h4>3. Цели обработки данных</h4>
+        <p>Данные используются исключительно для связи с вами, обсуждения деталей заказа, разработки эскиза и улучшения работы Сайта. Данные не передаются третьим лицам и не используются в рекламных рассылках без вашего согласия.</p>
+
+        <h4>4. Оплата и возврат средств</h4>
+        <p><strong>После получения оплаты и до утверждения финального варианта я вношу правки и дорабатываю эскиз, пока вы не подтвердите, что результат вас устраивает.</strong> Однако после того как готовая работа передана заказчику, возврат денежных средств не производится — в том числе в случае, если итоговый эскиз в итоге не понравился. Пожалуйста, внимательно проговаривайте пожелания и принимайте работу только после того, как результат полностью вас устроит.</p>
+
+        <h4>5. Cookies и аналитика</h4>
+        <p>Сайт использует счётчик Яндекс.Метрика для сбора обезличенной статистики посещаемости. Вы можете отключить cookies в настройках браузера — это не повлияет на возможность связаться со мной через мессенджеры.</p>
+
+        <h4>6. Права пользователя</h4>
+        <p>Вы можете запросить удаление переданных мне данных (переписки, контактов) в любой момент, написав об этом в любом из мессенджеров, указанных на Сайте.</p>
+
+        <h4>7. Контакты</h4>
+        <p>По всем вопросам, связанным с настоящей политикой, пишите через Telegram, WhatsApp или ВКонтакте — ссылки доступны в шапке и в футере Сайта.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPrivacyModal(e) {
+      if (e) e.preventDefault();
+      var m = document.getElementById('privacyModal');
+      if (!m) return;
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePrivacyModal() {
+      var m = document.getElementById('privacyModal');
+      if (!m) return;
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (event) {
+      var privacyModal = document.getElementById('privacyModal');
+      if (privacyModal && event.target === privacyModal) closePrivacyModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var privacyModal = document.getElementById('privacyModal');
+      if (privacyModal && privacyModal.classList.contains('open')) closePrivacyModal();
     });
   </script>
 

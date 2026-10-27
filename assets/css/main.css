@@ -199,6 +199,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.order-modal__dialog--sm {
+  max-width: 460px;
+}
+
 .order-modal__close {
   position: absolute;
   top: 12px;
@@ -247,80 +251,55 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 18px;
+  padding: 12px 16px;
   border-radius: 12px;
-  border: none;
-  font-size: 17px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease, transform 0.2s ease;
   width: 100%;
-  color: #0b0b0f;
+  color: #f4f4f4;
 }
 
 .order-modal__btn:hover {
   transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-
-.order-modal__btn--tg:hover {
+  border-color: rgba(255, 60, 61, 0.45);
+  background: rgba(255, 60, 61, 0.06);
   color: #ff3c3d;
 }
 
 .order-modal__btn:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid #ff3c3d;
   outline-offset: 3px;
-}
-
-.order-modal__btn--tg {
-  background: linear-gradient(135deg, #37aee2, #1e96c8);
-  box-shadow: 0 10px 28px rgba(55, 174, 226, 0.35);
-}
-
-.order-modal__btn--wa {
-  background: linear-gradient(135deg, #25d366, #128c7e);
-  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35);
-  font-size: 17px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  padding: 14px 18px;
-}
-
-.order-modal__btn--vk {
-  background: linear-gradient(135deg, #4c75a3, #2a5885);
-  box-shadow: 0 10px 28px rgba(76, 117, 163, 0.35);
-}
-
-.order-modal__btn--wa:hover {
-  color: #fff;
 }
 
 .order-modal__btn-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   width: 100%;
-  height: 100%;
-  text-align: center;
+}
+
+.order-modal__btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .order-modal__btn-main {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   line-height: 1.2;
 }
 
 .order-modal__btn-sub {
-  font-size: 11px;
+  font-size: 10.5px;
   opacity: 0.8;
-  margin-top: 2px;
   line-height: 1.2;
   text-transform: none;
   letter-spacing: normal;
@@ -329,8 +308,71 @@ body {
 .order-modal__btn-phone {
   font-size: 10px;
   opacity: 0.7;
-  margin-top: 2px;
   line-height: 1.2;
+}
+
+.order-modal__btn-icon {
+  font-size: 20px;
+  line-height: 1;
+  display: inline-flex;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+/* MAX icon: use the official background-image technique from maxicons.ru,
+   inverted to white for the dark button (same trick already used elsewhere
+   on the site), then swapped to a red-tinted filter on hover to match the
+   other icons/text turning red. */
+.order-modal__btn-icon--max {
+  width: 20px;
+  height: 20px;
+  background: url('https://maxicons.ru/icons/Max_logo_black.svg') center / contain no-repeat;
+  filter: brightness(0) invert(1);
+  transition: filter 0.25s ease;
+}
+
+.order-modal__btn:hover .order-modal__btn-icon--max {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(7482%) hue-rotate(357deg) brightness(101%) contrast(101%);
+}
+
+/* Order modal: button leading to the "examples" popup */
+.order-examples-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.order-examples-trigger:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #fff;
+}
+
+/* Order modal: scope/info popup shown before the messenger choice */
+.order-scope-note {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.order-scope-note strong {
+  color: #ff8a5c;
+}
+
+.order-scope-note + .order-scope-note {
+  margin-top: 10px;
 }
 
 .order-carousel {
@@ -445,6 +487,125 @@ body {
   opacity: 0.8;
 }
 
+/* CTA button reused across order popups (e.g. the "continue" button in the info popup) */
+.order-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  color: #0b0b0f;
+  background: linear-gradient(135deg, #ff6b3d, #ff3c7d);
+  box-shadow: 0 10px 28px rgba(255, 90, 70, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.order-form__submit:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* Order modal: final "thanks" step (after form submit) */
+.order-thanks {
+  text-align: center;
+  padding: 6px 0 10px;
+}
+
+.order-thanks__icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0b0b0f;
+  background: linear-gradient(135deg, #ff6b3d, #ff3c7d);
+  box-shadow: 0 10px 28px rgba(255, 90, 70, 0.35);
+}
+
+.order-thanks__title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.order-thanks__text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 420px;
+  margin: 0 auto 20px;
+}
+
+.order-thanks__laststep {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: rgba(255, 108, 61, 0.1);
+  border: 1px solid rgba(255, 108, 61, 0.4);
+  box-shadow: 0 0 0 4px rgba(255, 108, 61, 0.06);
+  margin-bottom: 20px;
+}
+
+.order-thanks__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6b3d, #ff3c7d);
+  color: #0b0b0f;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.order-thanks__instruction {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.order-thanks__instruction strong {
+  color: #ff8a5c;
+  font-size: 18px;
+}
+
+.order-thanks__icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.order-thanks__icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: 0.25s ease;
+}
+
+.order-thanks__icon-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
 body.modal-open {
   overflow: hidden;
   overscroll-behavior: contain;
@@ -469,12 +630,20 @@ body.modal-open {
     align-items: flex-start;
   }
 
+  .order-modal#orderInfoModal {
+    align-items: center;
+  }
+
   .order-modal__dialog {
     margin-top: 20px;
     max-height: calc(100vh - 40px);
     max-height: calc(100svh - 40px);
     max-height: calc(100dvh - 40px);
     height: auto;
+  }
+
+  .order-modal#orderInfoModal .order-modal__dialog {
+    margin-top: 0;
   }
 
   .order-carousel__item {
@@ -1165,6 +1334,68 @@ textarea:focus {
   text-align: center;
 }
 
+.footer-privacy-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.25s ease;
+  font-family: inherit;
+}
+
+.footer-privacy-link:hover {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Privacy Policy Modal
+--------------------------------------------------------------*/
+.privacy-modal__body {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.privacy-modal__body p {
+  margin: 0 0 14px;
+}
+
+.privacy-modal__body h4 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 22px 0 10px;
+}
+
+.privacy-modal__body h4:first-child {
+  margin-top: 0;
+}
+
+.privacy-modal__body ul {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.privacy-modal__body li {
+  margin-bottom: 8px;
+}
+
+.privacy-modal__updated {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: left;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1281,7 +1512,7 @@ textarea:focus {
   opacity: 0;
   right: 15px;
   bottom: -15px;
-  z-index: 99999;
+  z-index: 9000;
   background-color: var(--accent-color);
   width: 44px;
   height: 44px;
@@ -2916,3 +3147,85 @@ section,
   font-size: 14px;
 }
 
+/*--------------------------------------------------------------
+# Reviews Section
+--------------------------------------------------------------*/
+.reviews-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.review-card {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.review-card__stars {
+  color: var(--accent-color);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.review-card__text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.review-card__avatar {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.review-card__name {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.review-card__meta {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+@media (max-width: 991.98px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
